@@ -7,11 +7,11 @@ session_start();
 	<meta charset="utf-8">
 	<title>LOGIN SYSYTEM</title>
 	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link href='css/fonts.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Custom Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,9 +25,15 @@ session_start();
 			<?php
 				if(isset($_SESSION['u_id'])){
 					echo '
+						<h2>You are logged in.</h2>
+						</div>
+						<label><b> your session id is : ' . $_SESSION['u_id'] . '</b></label>
+						<br>
 						<form action="includes/logout.inc.php" method="POST">
+						<button type="button" name="home" onclick="location.href=\'home.php?redirect\'">Home</button>
 						<button type="submit" name="logout">Log out</button>
-						</form>';
+						</form>'
+						;
 				}else{
 					echo '
 						<form action="includes/login.inc.php" method="POST">
@@ -35,13 +41,13 @@ session_start();
 						</div>
 						<label for="username">Username</label>
 						<br/>
-						<input type="text" id="username" name="username">
+						<input type="text" id="username" name="username" autofocus>
 						<br/>
 						<label for="password">Password</label>
 						<br/>
 						<input type="password" id="password" name="password">
 						<br/>
-						<button type="submit" name="submit">Log In</button>
+						<button type="submit" name="login">Log In</button>
 						<button type="button" onclick="location.href=\'signup.php\'">Register</button>
 						<a href="#"><p class="small">Forgot your password?</p></a>
 						</form>';

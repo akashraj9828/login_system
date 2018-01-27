@@ -1,0 +1,27 @@
+UPDATE:
+[+]option to delete stories added
+[+]design improved too much
+[+]matarialized everthing
+[+]less bandwith reqd to load now
+
+UPDATE:
+[+]profile picture upload feature added
+[+]story max size increased (changed story from BLOB to MEDIUMBLOB)
+[+]renamed push_profile_pic.inc.php to upload.inc.php 
+        [+]now it handles all uploading (profile pic and story)
+
+
+UPDATE:
+[+] 404 page background change
+[+] home page   - profile pic added
+                - timing coordination with local server and remote server(in fetch_stories.inc.php)
+                - styling
+                - relative post time added (eg:- 5min ago , 1 week ago)
+                - stories now show latest one first
+[+]css  - [home_style.css]: colours value changed from hex to rgba
+        - [style.css]: colours value changed from hex to rgba
+        - [signup_style.css]: colours value changed from hex to rgba
+        - [all]: scrollbars removed
+[+]login    - now login can be done using both username and email
+            -
+[+]server_details.php added for debugging purpose
